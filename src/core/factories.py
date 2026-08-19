@@ -13,9 +13,7 @@ class ModelFactory:
             logger.info("initialize embedding model")
             return HuggingFaceEmbeddings(
                 model_name=settings.embedding_model_name,
-                model_kwargs={
-                    'device': 'cpu'
-                },
+                model_kwargs={'device': 'cpu'},
                 encode_kwargs={'normalize_embeddings': True}
             )
         else:
